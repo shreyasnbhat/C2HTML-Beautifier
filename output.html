@@ -1,0 +1,56 @@
+<html><pre>
+
+1   <font color='#E91E63'><strong>#include&lt;stdio.h&gt;</strong></font>
+2   <font color='#E91E63'><strong>#define MAXSIZE 1000</strong></font>
+3   <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="main">main</a></font>( <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="argc">argc</a></font><font color='#000000'><strong>, </strong></font><font color='#0000FF'><strong>char </strong></font><font color='#0000FF'><strong>const </strong></font><font color='#000000'><strong>* </strong></font><font color='#0000FF'><a name="argv">argv</a></font><font color='#000000'><strong>[</strong></font><font color='#000000'><strong>] </strong></font>) 
+4   {
+5       <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="inputs">inputs</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a name="MAXSIZE">MAXSIZE</a></font><font color='#000000'><strong>] </strong></font>;
+6       <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#MAXSIZE">MAXSIZE</a></font><font color='#000000'><strong>] </strong></font>;
+7       <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="N">N</a></font>;
+8       <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="k">k</a></font>;
+9       <font color='#0000FF'><strong>float </strong></font><font color='#0000FF'><a name="m">m</a> </font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'>3.456</font>;
+10      <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="y">y</a> </font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>0xFFEA</i></font>;
+11      <font color='#0000FF'><a name="string">string</a> </font><font color='#0000FF'><a name="s">s</a> </font><font color='#000000'><strong>= </strong></font><font color='#DD2C00'>&quot;This is a test string&quot;</font>;
+12      <font color='#0000FF'><a name="printf">printf</a></font>( <font color='#DD2C00'>&quot;Enter k: &quot;</font>) ;
+13      <font color='#0000FF'><a name="scanf">scanf</a></font>( <font color='#DD2C00'>&quot;%d&quot;</font><font color='#000000'><strong>, </strong></font><font color='#000000'><strong>&amp; </strong></font><font color='#0000FF'><a href="#k">k</a></font>) ;
+14      <font color='#0000FF'><a href="#printf">printf</a></font>( <font color='#DD2C00'>&quot;Enter the size of the array: &quot;</font>) ;
+15      <font color='#0000FF'><a href="#scanf">scanf</a></font>( <font color='#DD2C00'>&quot;%d&quot;</font><font color='#000000'><strong>, </strong></font><font color='#000000'><strong>&amp; </strong></font><font color='#0000FF'><a href="#N">N</a></font>) ;
+16      <font color='#0000FF'><strong>for </strong></font>( <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="i">i</a> </font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>0</i></font>; <font color='#0000FF'><a href="#i">i</a> </font><font color='#000000'><strong>&lt; </strong></font><font color='#0000FF'><a href="#N">N</a></font>; <font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>++ </strong></font>) 
+17      {
+18          <font color='#0000FF'><a href="#scanf">scanf</a></font>( <font color='#DD2C00'>&quot;%d&quot;</font><font color='#000000'><strong>, </strong></font><font color='#000000'><strong>&amp; </strong></font><font color='#0000FF'><a href="#inputs">inputs</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>] </strong></font>) ;
+19          
+20      }
+21      <font color='#66BB6A'>/* This comment might be as long as possible
+  without any regrets of its size of length or its ffin syntax
+  or whatever.  */</font>
+22      <font color='#66BB6A'>// prefSum stores sum from 0th element to kth element(included) in prefSum[k]</font>
+23      <font color='#0000FF'><a href="#prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#26C6DA'><i>0</i></font><font color='#000000'><strong>] </strong></font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>0</i></font>;
+24      <font color='#0000FF'><strong>for </strong></font>( <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a href="#i">i</a> </font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>1</i></font>; <font color='#0000FF'><a href="#i">i</a> </font><font color='#000000'><strong>&lt; </strong></font><font color='#0000FF'><a href="#N">N</a> </font><font color='#000000'><strong>+ </strong></font><font color='#26C6DA'><i>1</i></font>; <font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>++ </strong></font>) 
+25      {
+26          <font color='#0000FF'><a href="#prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>] </strong></font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>- </strong></font><font color='#26C6DA'><i>1</i></font><font color='#000000'><strong>] </strong></font><font color='#000000'><strong>+ </strong></font><font color='#0000FF'><a href="#inputs">inputs</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>- </strong></font><font color='#26C6DA'><i>1</i></font><font color='#000000'><strong>] </strong></font>;
+27          
+28      }
+29      <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="maxsum">maxsum</a> </font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>0</i></font>;
+30      <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="start">start</a></font><font color='#000000'><strong>, </strong></font><font color='#0000FF'><a name="end">end</a></font>;
+31      <font color='#0000FF'><strong>for</strong></font>( <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>= </strong></font><font color='#26C6DA'><i>0</i></font>; <font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>&lt;= </strong></font><font color='#0000FF'><a href="#N">N</a></font><font color='#000000'><strong>- </strong></font><font color='#26C6DA'><i>1</i></font>; <font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>++ </strong></font>) 
+32      {
+33          <font color='#0000FF'><strong>for </strong></font>( <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="j">j</a></font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>+ </strong></font><font color='#26C6DA'><i>1</i></font>; <font color='#0000FF'><a href="#j">j</a></font><font color='#000000'><strong>&lt;= </strong></font><font color='#0000FF'><a href="#N">N</a></font>; <font color='#0000FF'><a href="#j">j</a></font><font color='#000000'><strong>++ </strong></font>) 
+34          {
+35              <font color='#0000FF'><strong>int </strong></font><font color='#0000FF'><a name="diff">diff</a> </font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#j">j</a></font><font color='#000000'><strong>] </strong></font><font color='#000000'><strong>- </strong></font><font color='#0000FF'><a href="#prefSum">prefSum</a></font><font color='#000000'><strong>[</strong></font><font color='#0000FF'><a href="#i">i</a></font><font color='#000000'><strong>] </strong></font>;
+36              <font color='#0000FF'><strong>if</strong></font>( <font color='#0000FF'><a href="#diff">diff</a> </font><font color='#000000'><strong>&gt; </strong></font><font color='#0000FF'><a href="#maxsum">maxsum</a> </font><font color='#000000'><strong>&amp;&amp; </strong></font><font color='#0000FF'><a href="#diff">diff</a></font><font color='#000000'><strong>% </strong></font><font color='#0000FF'><a href="#k">k</a> </font><font color='#000000'><strong>== </strong></font><font color='#26C6DA'><i>0</i></font>) 
+37              {
+38                  <font color='#0000FF'><a href="#start">start</a> </font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#i">i</a></font>;
+39                  <font color='#0000FF'><a href="#end">end</a> </font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#j">j</a></font>;
+40                  <font color='#0000FF'><a href="#maxsum">maxsum</a> </font><font color='#000000'><strong>= </strong></font><font color='#0000FF'><a href="#diff">diff</a></font>;
+41                  
+42              }
+43              
+44          }
+45          
+46      }
+47      <font color='#0000FF'><a href="#printf">printf</a></font>( <font color='#DD2C00'>&quot;The result is %d\n&quot;</font><font color='#000000'><strong>, </strong></font><font color='#0000FF'><a name="max">max</a></font>err <font color='#0000FF'><a name="sum">sum</a></font><font color='#000000'><strong>/ </strong></font><font color='#0000FF'><a href="#k">k</a></font>) ;
+48      <font color='#0000FF'><a href="#printf">printf</a></font>( <font color='#DD2C00'>&quot;Start at %d and ends at %d \n&quot;</font><font color='#000000'><strong>, </strong></font><font color='#0000FF'><a href="#start">start</a></font><font color='#000000'><strong>, </strong></font><font color='#0000FF'><a href="#end">end</a></font><font color='#000000'><strong>- </strong></font><font color='#26C6DA'><i>1</i></font>) ;
+49      <font color='#0000FF'><strong>return </strong></font><font color='#26C6DA'><i>0</i></font>;
+50      
+51  }
+52  </pre></html>
