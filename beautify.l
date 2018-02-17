@@ -305,15 +305,8 @@ void init() {
   }
 }
 
-void test() {
-  char *s = "for";
-  printf("Lookup %d",lookup(s));
-}
-
-
 int main(){
   init();
-  test();
   FILE *fp;
   fp = freopen("output.html","w",stdout);
   printf("<html><pre>\n");
